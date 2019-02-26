@@ -1,0 +1,28 @@
+@import '../../../styles/vars.scss';
+
+.item-status-filter {
+
+    &__btn {
+        padding: 7px 5px;
+
+        font: {
+            size: .9rem;
+        }
+
+        &:first-child {
+            padding: 7px;
+
+            @media all and (min-width:1024px) {
+                padding: $btnPadding1024;
+            }
+        }
+
+        @media all and (min-width:1024px) {
+            padding: $btnPadding1024;
+
+            font: {
+                size: 1rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Check Spinner UI-component Correct renders component 1`] = `
+<div
+  className="spinner"
+>
+  <div
+    className="lds-css ng-scope"
+  >
+    <div
+      className="lds-ripple"
+      style={
+        Object {
+          "height": "100%",
+          "width": "100%",
+        }
+      }
+    >
+      <div />
+      <div />
+    </div>
+  </div>
+</div>
+`;

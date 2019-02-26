@@ -1,0 +1,14 @@
+.todo-list  {
+
+    &__item {
+        padding: .3rem;
+
+        background: {
+            color: rgb(245, 248, 248);
+        };
+
+        @media all and (min-width: 1024px) {
+            padding: .25rem .75rem;
+        }
+    }
+}

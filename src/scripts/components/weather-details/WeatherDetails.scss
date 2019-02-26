@@ -1,0 +1,46 @@
+.weather-details {
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+
+    flex-flow: column;
+
+    background: {
+        color: rgb(245, 248, 248);
+    }
+
+    &__title {
+        font: {
+            size: 20px;
+        }
+
+        @media all and (min-width:1024px) {
+            font: {
+                size: 26px;
+            }
+        }
+    }
+
+    &__card-title {
+        font: {
+            size: 18px;
+        }
+
+        @media all and (min-width:1024px) {
+            font: {
+                size: 22px;
+            }
+        }
+    }
+
+    &__card-txt {
+        margin-bottom: 5px;
+
+        @media all and (min-width:1024px) {
+            font: {
+                size: 1.1rem;
+            }
+        }
+    }
+}

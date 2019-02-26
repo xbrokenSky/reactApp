@@ -1,0 +1,43 @@
+@font-face {
+    font-family: FiraSans;
+    src: local('FiraSans-Regular'),
+        url(../fonts/FiraSans-Regular.otf) format('opentype'),
+        url(../fonts//FiraSans-Regular.svg) format('svg'),
+        url(../fonts//FiraSans-Regular.ttf) format('truetype'),
+        url(../fonts//FiraSans-Regular.woff) format('woff'),
+        url(../fonts//FiraSans-Regular.woff2) format('woff2');
+}
+
+body {
+    color: black;
+    background: white;
+    position: relative;
+    width: 100vw;
+    max-width: 100%;
+    height: 100%;
+    overflow: auto;
+    padding: 0;
+    margin: 0;
+    font-family: FiraSans, -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir",
+    "Segoe UI", "Lucida Grande", "Helvetica Neue", "Helvetica", "Fira Sans",
+    "Roboto", "Noto", "Droid Sans", "Cantarell", "Oxygen", "Ubuntu",
+    "Franklin Gothic Medium", "Century Gothic", "Liberation Sans", sans-serif;
+    font-size: 16px;
+    text-rendering: optimizeLegibility;
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+button {
+    background-color: inherit;
+    cursor: pointer;
+}
+
+button:focus {
+    outline: none;
+}
+
+a:focus {
+    outline: none;
+}

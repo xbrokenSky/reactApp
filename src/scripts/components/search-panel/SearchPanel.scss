@@ -1,0 +1,16 @@
+.search-panel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    margin-bottom: 10px;
+
+    &__search {
+        width: 50%;
+    
+        margin-right: 3px;
+    
+        flex-grow: 1;
+    }
+}
+

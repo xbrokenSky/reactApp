@@ -1,0 +1,42 @@
+.add-item-form {
+    display: flex;
+    justify-content: space-between;
+
+    margin-top: 10px;
+
+    &__txt.form-control {
+        width: 69%;
+
+        @media all and (min-width:1024px) {
+            width: 75%;
+        }
+    }
+
+    &__btn.btn.btn-primary {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 30%;
+
+        padding: 7px 3px;
+
+        font: {
+            size: 14px;
+        }
+
+        @media all and (min-width:1024px) {
+            width: 24.5%;
+
+            padding: 4px;
+
+            font: {
+                size: 1rem;
+            }
+        }
+    }
+
+    &__icon {
+        margin-left: 5px;
+    }
+}

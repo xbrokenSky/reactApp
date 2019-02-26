@@ -1,0 +1,60 @@
+.app-header {
+    justify-content: space-between;
+    align-items: flex-end;
+
+    &__nav {
+        display: flex;
+        align-items: flex-end;
+    }
+
+    &__nav-link {
+        font: {
+            size: 13px;
+        }
+
+        @media all and (min-width:1024px) {
+            font: {
+                size: 1rem;
+            }
+        }
+
+        &:not(:first-child) {
+            margin: 0 0 8px 5px;
+        }
+    }
+
+    &__nav-link.selected {
+        color: rgb(19, 132, 150);
+    }
+
+    &__title {
+        // flex-grow: 1;
+
+        font: {
+            size: 18px;
+        }
+
+        @media all and (min-width:1024px) {
+            font: {
+                size: 26px;
+            }
+        }
+    }
+
+    &__txt {
+        margin-bottom: 10px;
+
+        font: {
+            size: .83rem;
+        }
+
+        color: grey;
+
+        @media all and (min-width:1024px) {
+            font: {
+                size: 1.2rem;
+            }
+        }
+    }
+}
+

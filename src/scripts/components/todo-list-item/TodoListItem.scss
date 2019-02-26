@@ -1,0 +1,91 @@
+.todo-wrapper {
+    display: flex;
+    
+    align-items: center;
+    justify-content: space-between;
+
+    &__item-txt {
+        font: {
+            size: 14px;
+        }
+
+        word-break: break-all;
+
+        line-height: 1.25;
+
+        user-select: none;
+
+        cursor: pointer;
+
+        @media all and (min-width:1024px) {
+            font: {
+                size: 1rem;
+            }
+        }
+    }
+
+    &__item-txt.done {
+        text-decoration: line-through;
+    }
+
+    &__item-txt.important {
+        font: {
+            weight: 600;
+        }
+
+        color: rgb(24, 117, 192);
+    }
+
+    &__btn-wrapper {
+        display: flex;
+    }
+
+    &__item-btn {
+        display: inline-flex;
+        align-items: center;
+
+        padding: 5px 10px;
+        
+        font: {
+            size: 14px;
+        }
+        
+        border-radius: 3px;
+
+        transition: background-color 120ms ease, color 120ms ease;
+
+        @media all and (min-width:1024px) {
+            padding: 7px 15px;
+
+            font: {
+                size: 1rem;
+            }
+        }
+
+        &:first-child {
+            margin-right: 5px;
+
+            @media all and (min-width:1024px) {
+                margin-right: 10px;
+            }
+        }
+    }
+
+    & .btn-outline-danger {
+
+        &:hover {
+            background: {
+                color: rgb(212, 65, 65);
+            }
+        }
+    }
+
+    & .btn-outline-success {
+
+        &:hover {
+            background: {
+                color: rgb(55, 185, 55);
+            }
+        }
+    }
+}

@@ -1,0 +1,58 @@
+.weather-wrapper {
+    display: flex;
+
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    flex-flow: column;
+}
+.weather-changer {
+    // display: flex;
+
+    // margin-top: 10px;
+
+    // justify-content: space-between;
+
+    &__txt-field {
+        width: 65%;
+
+        transition: background-color 140ms ease;
+
+        @media all and (min-width:1024px) {
+            width: 75%
+        }
+    }
+
+    &__txt-field.error {
+        background: {
+            color: rgb(247, 240, 240);
+        }
+    }
+
+    // &__submit {
+    //     display: flex;
+
+    //     width: 34%;
+
+    //     padding: 5px;
+
+    //     justify-content: center;
+    //     align-items: center;
+
+    //     font: {
+    //         size: 14px;
+    //     }
+
+    //     @media all and (min-width:1024px) {
+    //         width: 24.5%;
+
+    //         font: {
+    //             size: 1rem;
+    //         }
+    //     }
+    // }
+
+    &__icon {
+        margin-left: 3px;
+    }
+}
