@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { NavLink, withRouter } from 'react-router-dom';
 import { FaCloudSun } from 'react-icons/fa';
+import { FiUsers } from 'react-icons/fi';
 import './AppHeader.scss';
 
 const AppHeader = ({ toDo, done }) => {
@@ -29,6 +30,16 @@ const AppHeader = ({ toDo, done }) => {
                 >
                     <FaCloudSun />
                     Weather
+                </NavLink>
+                <NavLink
+                    strict
+                    exact
+                    to='/persons/'
+                    className='app-header__nav-link'
+                    activeClassName='selected'
+                >
+                    <FiUsers />
+                    Persons
                 </NavLink>
             </nav>
             <h2 className='app-header__txt'>

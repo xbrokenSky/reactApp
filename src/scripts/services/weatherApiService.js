@@ -5,13 +5,10 @@ export default class WeatherApiService {
 
     _baseUrl = 'https://api.openweathermap.org/data/2.5/weather?q=';
 
-    // _rndUSerUrl = 'https://randomuser.me/api/';
-
     _urlOptions = '&lang=ru&units=metric';
 
     getData = async (cityName) => {
         const response = await fetch(`${this._baseUrl}${cityName}${this._urlOptions}${this._apiKey}`);
-        // const response = await fetch(this._rndUSerUrl);
 
         if (!response.ok || response.status !== 200) {
             throw new Error(`Request for ${cityName} failed by this reason ${response.status}`);

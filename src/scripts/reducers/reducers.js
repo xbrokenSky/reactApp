@@ -73,12 +73,43 @@ export const isDataLoading = (state = false, action) => {
     }
 };
 
+export const personData = (state = {}, action) => {
+    const { type, payload } = action;
+
+    switch (type) {
+        case C.RECEIVE_PERSON:
+            return {
+                ...state,
+                ...payload,
+            };
+        default:
+            return state;
+    }
+};
+
+export const isPersonLoading = (state = false, action) => {
+    const { type } = action;
+
+    switch (type) {
+        case C.FETCH_PERSON:
+            return true;
+        case C.RECEIVE_PERSON:
+            return false;
+        case C.FETCH_PERSON_FAILED:
+            return false;
+        default:
+            return state;
+    }
+};
+
 const appReducer = combineReducers({
     todoData,
     searchValue,
     sortedBy,
     weatherData,
     isDataLoading,
+    personData,
+    isPersonLoading,
 });
 
 export default appReducer;

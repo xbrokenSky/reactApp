@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
 import AppHeader from '../app-header';
-import { TodoPage, WeatherPage } from '../pages';
+import { TodoPage, WeatherPage, PersonPage } from '../pages';
 import './App.scss';
 
 class App extends React.Component {
@@ -19,6 +19,10 @@ class App extends React.Component {
                         <Route
                             path='/weather/'
                             component={WeatherPage}
+                        />
+                        <Route
+                            path='/persons/'
+                            component={PersonPage}
                         />
                         <Redirect to='/' />
                     </Switch>

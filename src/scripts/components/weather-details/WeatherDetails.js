@@ -1,9 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import Spinner from '../spinner';
 import './WeatherDetails.scss';
 
-const WeatherDetails = ({ data }) => {
+const WeatherDetails = ({ data, loading }) => {
     const { name, main } = data;
+
+    if (loading) {
+        return (
+            <Spinner />
+        );
+    }
 
     return (
         <section className='weather-details'>
@@ -26,11 +34,20 @@ const WeatherDetails = ({ data }) => {
 };
 
 WeatherDetails.defaultProps = {
+    loading: false,
     data: {},
 };
 
 WeatherDetails.propTypes = {
+    loading: PropTypes.bool,
     data: PropTypes.object,
 };
 
-export default WeatherDetails;
+const mapStateToProps = ({ weatherData, isDataLoading }) => {
+    return {
+        data: weatherData,
+        loading: isDataLoading,
+    };
+};
+
+export default connect(mapStateToProps, null)(WeatherDetails);

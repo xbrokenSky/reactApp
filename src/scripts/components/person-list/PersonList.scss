@@ -1,0 +1,17 @@
+@import '../../../styles/placeholders.scss';
+
+.person-list {
+    @extend %flexCentered;
+
+    width: 100%;
+
+    flex-flow: column;
+
+    // margin: 0 auto;
+
+    @media all and (min-width:1024px) {
+        // width: 40%;
+
+        flex-flow: row;
+    }
+}

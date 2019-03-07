@@ -1,0 +1,68 @@
+@import '../../../styles/vars.scss';
+@import '../../../styles/placeholders.scss';
+
+.person-card {
+    @extend %flexCentered;
+
+    width: 100%;
+
+    flex-flow: column;
+
+    background: {
+        color: rgb(249, 251, 252);
+    }
+
+    border: 1px solid rgb(199, 193, 193);
+
+    border-radius: 6px;
+
+    @media all and (min-width:1024px) {
+        width: 33%;
+    }
+
+    &:not(:first-child) {
+        margin-top: 15px;
+
+        @media all and (min-width:1024px) {
+            margin-top: 0;
+            margin-left: 10px;
+        }
+    }
+
+    &__fig {
+        margin-top: 10px;
+    }
+
+    &__pic {
+        width: 130px;
+        height: 130px;
+
+        border-radius: 50%;
+    }
+
+    &__title {
+        margin: $mrg10px;
+
+        font: {
+            size: 19px;
+        }
+    }
+
+    &__gender {
+        margin-right: 5px;
+
+        font: {
+            size: 14px;
+        }
+
+        color: rgb(87, 85, 85);
+    }
+
+    &__city {
+        font: {
+            size: 14px;
+        }
+
+        color: rgb(34, 33, 33);
+    }
+}

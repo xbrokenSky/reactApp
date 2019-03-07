@@ -7,8 +7,11 @@ import {
     onImportant,
     fetchData,
     receiveData,
-    // dataLoaded,
     requestWeather,
+    fetchPerson,
+    receivePerson,
+    asyncPersonRequest,
+    fetchPersonFailed,
 } from './actions';
 
 export {
@@ -20,6 +23,9 @@ export {
     onImportant,
     fetchData,
     receiveData,
-    // dataLoaded,
     requestWeather,
+    fetchPerson,
+    receivePerson,
+    asyncPersonRequest,
+    fetchPersonFailed,
 };

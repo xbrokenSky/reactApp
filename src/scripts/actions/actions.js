@@ -73,13 +73,38 @@ const receiveData = (response) => {
 
 const requestWeather = (cityName) => {
     return (dispatch) => {
-        dispatch(fetchData);
+        dispatch(fetchData());
 
         return getData(cityName).then((response) => {
             dispatch(receiveData(response));
         }).catch((error) => {
-            console.log(error);
+            throw new Error(`${error.name}: ${error.message}`);
         });
+    };
+};
+
+const fetchPerson = () => {
+    return {
+        type: C.FETCH_PERSON,
+    };
+};
+
+const fetchPersonFailed = () => {
+    return {
+        type: C.FETCH_PERSON_FAILED,
+    };
+};
+
+const receivePerson = (response) => {
+    return {
+        type: C.RECEIVE_PERSON,
+        payload: response,
+    };
+};
+
+const asyncPersonRequest = () => {
+    return {
+        type: C.ASYNC_PERSON,
     };
 };
 
@@ -92,6 +117,9 @@ export {
     onImportant,
     fetchData,
     receiveData,
-    // dataLoaded,
     requestWeather,
+    fetchPerson,
+    receivePerson,
+    asyncPersonRequest,
+    fetchPersonFailed,
 };
