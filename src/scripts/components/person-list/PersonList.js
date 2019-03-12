@@ -23,13 +23,9 @@ class PersonList extends React.Component {
     //     super(props);
     // }
 
-    componentWillMount() {
+    componentDidMount() {
         const { dispatch } = this.props;
         dispatch(asyncPersonRequest());
-    }
-
-    componentDidMount() {
-
     }
 
     render() {
