@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { FaTrashAlt, FaExclamation } from 'react-icons/fa';
 import './TodoListItem.scss';
 
-const TodoListItem = ({
+const TodoListItem = React.memo(({
     label = '', important = false, done = false, onDelete, onDone, onImportant,
 }) => {
     let classNames = 'todo-wrapper__item-txt';
@@ -28,7 +28,7 @@ const TodoListItem = ({
             </div>
         </div>
     );
-};
+});
 
 TodoListItem.defaultProps = {
     onDelete: (f) => {

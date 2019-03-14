@@ -6,7 +6,7 @@ import { FaCloudSun } from 'react-icons/fa';
 import { FiUsers } from 'react-icons/fi';
 import './AppHeader.scss';
 
-const AppHeader = ({ toDo, done }) => {
+const AppHeader = React.memo(({ toDo, done }) => {
     return (
         <section className='app-header d-flex'>
             <nav className='app-header__nav'>
@@ -47,7 +47,7 @@ const AppHeader = ({ toDo, done }) => {
             </h2>
         </section>
     );
-};
+});
 
 AppHeader.defaultProps = {
     toDo: 0,

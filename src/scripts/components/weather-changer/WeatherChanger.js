@@ -6,53 +6,27 @@ import { requestWeather } from '../../actions';
 import { StyledForm, StyledButton, StyledErrorMessage } from '../styled-components';
 import './WeatherChanger.scss';
 
-// const WeatherChanger = ({ dispatch }) => {
-//     let chosenCity;
-
-//     const submit = (e) => {
-//         e.preventDefault();
-
-//         const cityValue = chosenCity.value.trim();
-
-//         if (!cityValue) {
-//             return null;
-//         }
-
-//         dispatch(requestWeather(cityValue));
-
-//         chosenCity.value = '';
-
-//         return null;
-//     };
-
-//     return (
-//         <StyledForm className='weather-changer' onSubmit={submit}>
-//             <input
-//                 className='weather-changer__txt-field form-control'
-//                 type='text'
-//                 ref={(input) => { chosenCity = input; }}
-//                 placeholder='Type new City here'
-//             />
-//             <StyledButton
-//                 className='weather-changer__submit btn btn-primary'
-//                 type='submit'
-//                 title='Change City'
-//             >
-//                 Change city
-//                 <IoIosRefresh className='weather-changer__icon' />
-//             </StyledButton>
-//         </StyledForm>
-//     );
-// };
-
-class WeatherChanger extends React.Component {
-    state = {
-        cityValue: '',
-        inputError: false,
+class WeatherChanger extends React.PureComponent {
+    static defaultProps = {
+        dispatch: (f) => { return f; },
     };
+
+    static propTypes = {
+        dispatch: PropTypes.func,
+    };
+
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            cityValue: '',
+            inputError: false,
+        };
+    }
 
     submit = (e) => {
         e.preventDefault();
+
         const { dispatch } = this.props;
         const { cityValue, inputError } = this.state;
 
@@ -112,6 +86,7 @@ class WeatherChanger extends React.Component {
                         className='weather-changer__submit btn btn-primary'
                         type='submit'
                         title='Change City'
+                        disabled={(cityValue === '' || inputError)}
                     >
                         Change city
                         <IoIosRefresh className='weather-changer__icon' />
@@ -122,15 +97,5 @@ class WeatherChanger extends React.Component {
         );
     }
 }
-
-WeatherChanger.defaultProps = {
-    // pickCity: (f) => { return f; },
-    dispatch: (f) => { return f; },
-};
-
-WeatherChanger.propTypes = {
-    // pickCity: PropTypes.func,
-    dispatch: PropTypes.func,
-};
 
 export default connect()(WeatherChanger);

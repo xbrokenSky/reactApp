@@ -26,12 +26,6 @@ export default class ErrorCatcher extends React.Component {
         };
     }
 
-    // componentDidCatch(error) {
-    //     this.setState({
-    //         error,
-    //     });
-    // }
-
     render() {
         const { error } = this.state;
         if (error) {

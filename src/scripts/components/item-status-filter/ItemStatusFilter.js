@@ -5,7 +5,7 @@ import { onFilter } from '../../actions';
 import './ItemStatusFilter.scss';
 
 /* eslint-disable-next-line no-shadow */
-const ItemStatusFilter = ({ sortedBy, onFilter }) => {
+const ItemStatusFilter = React.memo(({ sortedBy, onFilter }) => {
     const btns = [
         {
             name: 'all',
@@ -41,7 +41,7 @@ const ItemStatusFilter = ({ sortedBy, onFilter }) => {
             {buttons}
         </div>
     );
-};
+});
 
 ItemStatusFilter.defaultProps = {
     onFilter: (f) => { return f; },
