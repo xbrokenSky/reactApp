@@ -6,7 +6,7 @@ import { requestWeather } from '../../actions';
 import { StyledForm, StyledButton, StyledErrorMessage } from '../styled-components';
 import './WeatherChanger.scss';
 
-class WeatherChanger extends React.PureComponent {
+class WeatherChanger extends React.Component {
     static defaultProps = {
         dispatch: (f) => { return f; },
     };
